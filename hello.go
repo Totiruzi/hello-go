@@ -16,11 +16,14 @@ func main() {
     log.SetPrefix("greetings: ")
     log.SetFlags(0)
 
+    // A slice of names
+    names := []string {"Chris", "Colorful", "Gabriel", "Daniil"}
+
 //     format := greetings.randomFormat()
-    message, err := greetings.Hello("Gabriel")
+    messages, err := greetings.Hellos(names)
 
     if err != nil {
     log.Fatal(err)
     }
-    fmt.Println(message)
+    fmt.Println(messages)
 }
